@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import Button from '@mui/material/Button'
-import TextField from '@mui/material/TextField'
-import Container from '@mui/material/Container'
-import Stack from '@mui/material/Stack'
+import React, { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 
 const SearchPage = () => {
-  let navigate = useNavigate()
-  const [query, setQuery] = useState('')
+  let navigate = useNavigate();
+  const [query, setQuery] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    navigate(`/search/${query}`)
-  }
+    e.preventDefault();
+    navigate(`/search/${query}`);
+  };
 
   return (
     <Container maxWidth="sm">
@@ -38,7 +38,7 @@ const SearchPage = () => {
       </form>
       <Outlet />
     </Container>
-  )
-}
+  );
+};
 
-export default SearchPage
+export default SearchPage;
