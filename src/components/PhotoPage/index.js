@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import queryString from "query-string";
+import Box from '@mui/material/Box';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,8 +14,8 @@ export default function PhotoPage() {
   const searchParams = queryString.parse(location.search);
   console.log(searchParams);
   return (
-    <div>
-      <Card sx={{ maxWidth: 345 }} >
+    <Box sx={{ my:4}} >
+      <Card >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -28,6 +29,6 @@ export default function PhotoPage() {
           </CardContent>
         </CardActionArea>
       </Card>
-    </div>
+    </Box>
   );
 }
