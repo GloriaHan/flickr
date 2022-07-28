@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 
 const SearchPage = () => {
   let navigate = useNavigate();
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
